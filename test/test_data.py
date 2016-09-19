@@ -1,5 +1,5 @@
 import pytest
-from ..data import *
+from ..modules import str_to_list_of_int
 
 
 class TestData:
