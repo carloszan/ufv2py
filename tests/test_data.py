@@ -1,8 +1,15 @@
+# -*- coding: utf-8 -*-
 import pytest
-from ..app.helpers.data_deal import str_to_list_of_int
+from ..app.models.data import Data
 
 
-class TestDataDeal:
+class DataTests:
+    def test_data__init(self):
+        data = Data(x=[1, 1], y=[1, 2], z=[1, 3])
+        assert data.x == [1, 1]
+        assert data.y == [1, 2]
+        assert data.z == [1, 3]
 
-    def test_str_to_int_list(self):
-        assert str_to_list_of_int('1 2 3 4 ') == [1, 2, 3, 4]
+        data = Data(x=[1, 1], y=[1, 2])
+        with pytest.raises(AttributeError):
+            assert data.z == 1
