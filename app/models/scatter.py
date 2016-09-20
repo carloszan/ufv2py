@@ -9,5 +9,11 @@ class Scatter(metaclass=ABCMeta):
         pass
 
     @abstractmethod
-    def save(self):
+    def save(self, name):
         pass
+
+    def x_label(self, label):
+        self.x_label = label
+
+    def y_label(self, label):
+        self.y_label = label

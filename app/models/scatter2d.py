@@ -20,9 +20,3 @@ class Scatter2D(Scatter):
     def save(self, name):
         # self.plt.savefig(name)
         pass
-
-    def x_label(self, label):
-        self.x_label = label
-
-    def y_label(self, label):
-        self.y_label = label
