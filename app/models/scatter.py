@@ -7,3 +7,7 @@ class Scatter(metaclass=ABCMeta):
     @abstractmethod
     def plot(self):
         pass
+
+    @abstractmethod
+    def save(self):
+        pass
