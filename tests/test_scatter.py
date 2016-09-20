@@ -18,3 +18,10 @@ class TestScatter:
         s = Scatter2D(x=[1, 1], y=[1, 2])
         with pytest.raises(AttributeError):
             assert s.data.z == [1, 3]
+
+    def test_labels(self):
+        s = Scatter2D(x=[1, 1], y=[1, 2], z=[1, 3])
+        s.x_label('abscissa')
+        s.y_label('ordenada')
+        assert s.x_label == 'abscissa'
+        assert s.y_label == 'ordenada'
