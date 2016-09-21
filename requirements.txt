@@ -1,3 +1,8 @@
 pip3 install pytest
+pip3 install pytest-mpl
+pip3 install nose
 apt-get install python3-tk
 pip3 install matplotlib
+
+tests:
+run tests with py.test --mp

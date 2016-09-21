@@ -1,22 +1,24 @@
 # -*- coding: utf-8 -*-
 from .scatter import Scatter
 from .data import Data
-# from mpl_toolkits.mplot3d import Axes3D
-# import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
+import matplotlib.pyplot as plt
 
 
 class Scatter2D(Scatter):
 
     def __init__(self, **kwargs):
         self.data = Data(**kwargs)
-        # self.plt = scatter(data.x, data.y)
+        plt.scatter(self.data.x, self.data.y)
+
+    # TODO: make this works without breaking the tests
+    # def __del__(self):
+    #     plt.cla()
 
     def plot(self):
         plt.xlabel(self.x_label)
-        plt.xlabel(self.y_label)
-        # self.plt.show()
-        pass
+        plt.ylabel(self.y_label)
+        plt.show()
 
     def save(self, name):
-        # self.plt.savefig(name)
-        pass
+        plt.savefig(name)
