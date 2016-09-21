@@ -16,9 +16,8 @@ class Scatter2D(Scatter):
         self.ax = fig.add_subplot(111)
         self.ax.scatter(self.data.x, self.data.y)
 
-    # TODO: make this works without breaking the tests
-    # def __del__(self):
-    #     plt.cla()
+    def __del__(self):
+        plt.cla()
 
     def plot(self):
         plt.xlabel(self.x_label)
