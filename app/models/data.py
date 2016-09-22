@@ -3,7 +3,7 @@
 
 class Data():
 
-    def __init__(self, **kwargs):
+    def __init__(self, kwargs={}):
         self.x = kwargs['x']
         self.y = kwargs['y']
 

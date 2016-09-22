@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 class Scatter2D(Scatter):
 
     def __init__(self, **kwargs):
-        self.data = Data(**kwargs)
+        self.data = Data(self.__init_data(**kwargs))
         self.__init_figure()
 
     def __init_figure(self):
@@ -16,8 +16,11 @@ class Scatter2D(Scatter):
         self.ax = fig.add_subplot(111)
         self.ax.scatter(self.data.x, self.data.y)
 
-    def __del__(self):
-        plt.cla()
+    # def __del__(self):
+    #     plt.cla()
+
+    def __init_data(self, **kwargs):
+        return {'x': kwargs['x'], 'y': kwargs['y']}
 
     def plot(self):
         plt.xlabel(self.x_label)
@@ -25,7 +28,8 @@ class Scatter2D(Scatter):
         plt.show()
 
     def add_subplot(self, **kwargs):
-        self.ax.scatter(kwargs['x'], kwargs['y'])
+        args = Data(self.__init_data(**kwargs))
+        self.ax.scatter(args.x, args.y)
 
     def save(self, name):
         plt.savefig(name)
