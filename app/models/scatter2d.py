@@ -12,9 +12,12 @@ class Scatter2D(Scatter):
         self.__init_figure()
 
     def __init_figure(self):
-        fig = plt.figure()
-        self.ax = fig.add_subplot(111)
+        self.fig = plt.figure()
+        self.ax = self.__add_subplot(111);
         self.ax.scatter(self.data.x, self.data.y)
+
+    def __add_subplot(self, place):
+        return self.fig.add_subplot(place)
 
     # def __del__(self):
     #     plt.cla()
