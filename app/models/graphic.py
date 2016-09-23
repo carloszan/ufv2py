@@ -2,7 +2,7 @@
 from abc import ABCMeta, abstractmethod
 
 
-class Scatter(metaclass=ABCMeta):
+class Graphic(metaclass=ABCMeta):
 
     @abstractmethod
     def plot(self):
