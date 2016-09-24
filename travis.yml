@@ -1,0 +1,11 @@
+language: python
+python:
+  - "3.5.2"
+install:
+  - pip install -r requirements.txt
+# matplotlib requires python-tk
+before_install:
+  - sudo apt-get -qq update
+  - sudo apt-get install -y python-tk
+script:
+  - py.test
