@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from abc import ABCMeta, abstractmethod
-
+import matplotlib.pyplot as plt
 
 class Graphic(metaclass=ABCMeta):
 
@@ -11,12 +11,13 @@ class Graphic(metaclass=ABCMeta):
     #
     # # refactor?
     # @abstractmethod
-    # def __add_subplot(self, place):
-    #     pass
+    # def add_subplot(self, kwargs={}):
+    #     args = Data(kwargs)
 
-    @abstractmethod
     def plot(self):
-        pass
+        plt.xlabel(self.x_label)
+        plt.ylabel(self.y_label)
+        plt.show()
 
     @abstractmethod
     def save(self, name):

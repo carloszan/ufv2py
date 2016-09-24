@@ -11,16 +11,23 @@ class Line(Graphic):
         self.__init_figure()
 
     def __init_figure(self):
-        pass
+        self.fig = plt.figure()
+        self.ax = self.__add_subplot(111)
+        self.ax.plot(self.x(), self.y())
+
+    def __add_subplot(self, place):
+        return self.fig.add_subplot(place)
 
     def __init_data(self, **kwargs):
         return {'x': kwargs['x'], 'y': kwargs['y']}
 
-    def plot(self):
-        pass
+    def add_subplot(self, **kwargs):
+        args = Data(self.__init_data(**kwargs))
+        color = kwargs['color']
+        self.ax.plot(args.x, args.y, color)
 
     def save(self):
-        pass
+        plt.save()
 
     def x(self):
         return self.data.x

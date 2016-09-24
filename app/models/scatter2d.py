@@ -25,11 +25,6 @@ class Scatter2D(Graphic):
     def __init_data(self, **kwargs):
         return {'x': kwargs['x'], 'y': kwargs['y']}
 
-    def plot(self):
-        plt.xlabel(self.x_label)
-        plt.ylabel(self.y_label)
-        plt.show()
-
     def add_subplot(self, **kwargs):
         args = Data(self.__init_data(**kwargs))
         self.ax.scatter(args.x, args.y)
