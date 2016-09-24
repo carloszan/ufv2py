@@ -1,3 +1,7 @@
+dependencies:
+  pre:
+    - sudo apt-get python3-tk
+
 machine:
   python:
     version: 3.5.2
