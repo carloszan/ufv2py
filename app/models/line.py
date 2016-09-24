@@ -8,6 +8,10 @@ class Line(Graphic):
 
     def __init__(self, **kwargs):
         self.data = Data(self.__init_data(**kwargs))
+        self.__init_figure()
+
+    def __init_figure(self):
+        pass
 
     def __init_data(self, **kwargs):
         return {'x': kwargs['x'], 'y': kwargs['y']}
