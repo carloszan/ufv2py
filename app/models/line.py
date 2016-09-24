@@ -23,8 +23,7 @@ class Line(Graphic):
 
     def add_subplot(self, **kwargs):
         args = Data(self.__init_data(**kwargs))
-        color = kwargs['color']
-        self.ax.plot(args.x, args.y, color)
+        self.ax.plot(args.x, args.y, kwargs['color'])
 
     def save(self):
         plt.save()
