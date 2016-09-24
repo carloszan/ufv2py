@@ -17,8 +17,8 @@ class TestScatter:
         assert callable(Scatter2D.plot)
 
     def test_init(self):
-        assert self.s.data.x == [1, 1]
-        assert self.s.data.y == [1, 2]
+        assert self.s.x() == [1, 1]
+        assert self.s.y() == [1, 2]
 
     def test_labels(self):
         self.s.x_label('abscissa')

@@ -36,3 +36,9 @@ class Scatter2D(Graphic):
 
     def save(self, name):
         plt.savefig(name)
+
+    def x(self):
+        return self.data.x
+
+    def y(self):
+        return self.data.y
