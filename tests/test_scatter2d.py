@@ -12,10 +12,6 @@ class TestScatter:
     def teardown_method(self, method):
         plt.cla()
 
-    def test_method_calls(self):
-        assert callable(Scatter2D.save)
-        assert callable(Scatter2D.plot)
-
     def test_init(self):
         assert self.s.x() == [1, 1]
         assert self.s.y() == [1, 2]
