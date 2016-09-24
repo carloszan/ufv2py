@@ -1,6 +1,6 @@
 dependencies:
   pre:
-    - sudo apt-get python3-tk
+    - sudo apt-get install python3-tk
 
 machine:
   python:
