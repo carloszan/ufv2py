@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
 import pytest
 from ..app.models.line import Line
-import matplotlib
-matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 
 
