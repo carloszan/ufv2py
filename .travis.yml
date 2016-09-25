@@ -1,12 +1,13 @@
 language: python
 python:
   - "3.5"
-install:
-  - pip install -r requirements.txt
-# matplotlib requires python-tk
+  # matplotlib requires python-tk
 before_install:
   - sudo apt-get -qq update
   - sudo apt-get install -y python-tk
   - sudo apt-get install -y python3-tk
+install:
+  - pip install -r requirements.txt
+  - pip install matplotlib
 script:
   - py.test
