@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 from abc import ABCMeta, abstractmethod
+import matplotlib
+matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 
 class Graphic(metaclass=ABCMeta):

@@ -2,6 +2,8 @@
 from .graphic import Graphic
 from .data import Data
 from mpl_toolkits.mplot3d import Axes3D
+import matplotlib
+matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 
 
