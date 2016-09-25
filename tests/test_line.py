@@ -4,6 +4,11 @@ from ..app.models.line import Line
 import matplotlib.pyplot as plt
 
 
+# function: 2^n
+def two_power_n():
+    return [2**x for x in list(range(1, 11))]
+
+
 class TestLine:
 
     def setup_method(self):
@@ -29,9 +34,8 @@ class TestLine:
     @pytest.mark.mpl_image_compare(baseline_dir='baseline',
                                    filename='test_function_line.png')
     def test_function_line(self):
-        # function: 2^n
         x_points = list(range(1, 11))
-        y_points = [2**x for x in list(range(1, 11))]
+        y_points = two_power_n()
         l = Line(x=x_points, y=y_points)
         l.x_label('abscissa')
         l.y_label('ordenada')
@@ -44,6 +48,6 @@ class TestLine:
         y_points = list(range(50))
         l = Line(x=x_points, y=y_points)
         x2_points = list(range(1, 11))
-        y2_points = [2**x for x in list(range(1, 11))]
+        y2_points = two_power_n()
         l.add_subplot(x=x2_points, y=y2_points, color='r')
         return plt
