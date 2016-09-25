@@ -3,7 +3,7 @@
 # pip3 install nose
 # run tests:
 # run tests with py.test --mpl
-matplotlib==1.5.3
+# matplotlib==1.5.3
 pytest==3.0.2
 pytest-mpl==0.5
 pyqt5
