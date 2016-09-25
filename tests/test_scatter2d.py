@@ -2,7 +2,7 @@
 import pytest
 from ..app.models.scatter2d import Scatter2D
 import matplotlib
-matplotlib.use('agg')
+matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 
 
