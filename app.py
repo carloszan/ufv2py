@@ -10,7 +10,7 @@ class Window(QMainWindow):
 
         self.__initUI__()
 
-    def __initUI__(self):
+    def __initUI(self):
         self.setGeometry(350, 200, 600, 500)
         self.setWindowTitle("ufv2py")
         self.central_widget = QStackedWidget()
