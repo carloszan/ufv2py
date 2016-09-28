@@ -8,7 +8,7 @@ class Window(QMainWindow):
     def __init__(self):
         super(Window, self).__init__()
 
-        self.__initUI__()
+        self.__initUI()
 
     def __initUI(self):
         self.setGeometry(350, 200, 600, 500)
