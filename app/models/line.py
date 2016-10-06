@@ -1,4 +1,4 @@
-from .graphic import Graphic
+from .graph import Graph
 from .data import Data
 # to build succeed we have to put these lines
 # import matplotlib
@@ -6,7 +6,7 @@ from .data import Data
 import matplotlib.pyplot as plt
 
 
-class Line(Graphic):
+class Line(Graph):
 
     def __init__(self, **kwargs):
         self.data = Data(self.__init_data(**kwargs))

@@ -6,7 +6,7 @@ from abc import ABCMeta, abstractmethod
 import matplotlib.pyplot as plt
 
 
-class Graphic(metaclass=ABCMeta):
+class Graph(metaclass=ABCMeta):
 
     # # refactor?
     # @abstractmethod
