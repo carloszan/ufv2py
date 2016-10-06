@@ -54,7 +54,7 @@ class TestLine:
         l = Line(x=x_points, y=y_points)
         x2_points = list(range(1, 11))
         y2_points = two_power_n()
-        l.add_subplot(x=x2_points, y=y2_points, color='r')
+        l.add_plot(x=x2_points, y=y2_points, color='r')
         return plt
 
     @pytest.mark.mpl_image_compare(baseline_dir='baseline',
@@ -65,8 +65,8 @@ class TestLine:
         l = Line(x=x_points, y=y_points)
         x2_points = list(range(1, 11))
         y2_points = two_power_n()
-        l.add_subplot(x=x2_points, y=y2_points, color='r')
+        l.add_plot(x=x2_points, y=y2_points, color='r')
         x3_points = list(range(1, 11))
         y3_points = n_power_two()
-        l.add_subplot(x=x3_points, y=y3_points, color='g')
+        l.add_plot(x=x3_points, y=y3_points, color='g')
         return plt

@@ -34,5 +34,5 @@ class TestScatter:
                                    filename='test_add_subplot_scatter2d.png')
     def test_add_data(self):
         s = Scatter2D(x=[1, 2], y=[3, 4])
-        s.add_subplot(x=[5, 6], y=[4, 5])
+        s.add_plot(x=[5, 6], y=[4, 5])
         return plt
