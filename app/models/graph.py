@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
 from abc import ABCMeta, abstractmethod
-# to build succeed we have to put these lines
-# import matplotlib
-# matplotlib.use('Agg')
+from ..helpers.imports import *
 import matplotlib.pyplot as plt
 
 

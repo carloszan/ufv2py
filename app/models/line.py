@@ -1,8 +1,6 @@
 from .graph import Graph
 from .data import Data
-# to build succeed we have to put these lines
-# import matplotlib
-# matplotlib.use('Agg')
+from ..helpers.imports import *
 import matplotlib.pyplot as plt
 
 
