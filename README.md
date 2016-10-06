@@ -6,7 +6,7 @@ This is a 100% academic open source project.
 
 # how to run
 - be sure you're using python 3.5.x
-- pip install -r requirements.
+- pip install -r requirements.txt
 - py.test --mpl
 - python app.py
 

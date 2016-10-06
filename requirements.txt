@@ -2,7 +2,6 @@
 
 # you should have these packages installed
 # apt-get install python3-tk
-# pip3 install nose
 
 # run tests:
 # run tests with py.test --mpl
