@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 import sys
-from PyQt5.QtWidgets import QApplication, QMainWindow, QStackedWidget
+from PyQt5.QtWidgets import *
+from app.helpers.data_dealers import str_to_list_of_int
+from app.models.scatter2d import Scatter2D
 
 
 class Window(QMainWindow):
@@ -13,18 +15,27 @@ class Window(QMainWindow):
     def __initUI(self):
         self.setGeometry(350, 200, 600, 500)
         self.setWindowTitle("ufv2py")
-        self.central_widget = QStackedWidget()
-        self.setCentralWidget(self.central_widget)
 
         menubar = self.menuBar()
         fileMenu = menubar.addMenu('Graficos')
         plotagem = fileMenu.addMenu('Plotagem')
-        plotagem.addAction('2D', self.fechar)
+        plotagem.addAction('2D', self.open_csv)
+
+
 
         self.show()
 
-    def fechar(self):
-        self.close()
+    def open_csv(self):
+        fname = QFileDialog.getOpenFileName(self, 'Open file')
+        data = None
+
+        if fname[0]:
+            f = open(fname[0], 'r')
+
+            with f:
+                data = f.read()
+
+        x, y = str_to_list_of_int(data)
 
 
 def main():
